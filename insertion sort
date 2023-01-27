@@ -1,0 +1,17 @@
+def insertionSort1(lis,n):
+    # Write your code here
+    key=lis[-1]
+    i=n-1
+    while i>0 and lis[i-1]>key:
+        lis[i]=lis[i-1]
+        print(*lis)
+        i-=1
+    lis[i]=key
+    print(*lis)
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    insertionSort1(arr, n)
