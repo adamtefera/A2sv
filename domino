@@ -1,0 +1,5 @@
+rec_dim=input()
+domino_unit=2
+dim=rec_dim.split('')
+print((int(dim[0])*int(dim[1]))//domino_unit)
+
