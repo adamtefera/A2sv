@@ -1,0 +1,19 @@
+
+unsorted=True
+swap=0
+def swape(lis):
+    global unsorted
+    global swap
+    while unsorted:
+        unsorted=False
+        for i in range((len(lis)-1)):
+            if lis[i]>lis[i+1]:
+                lis[i],lis[i+1]=lis[i+1],lis[i]
+                swap+=1
+                unsorted=True
+    return lis
+if __name__ == '__main__':
+    n = int(input().strip())
+    lis= list(map(int, input().rstrip().split()))
+    fin=swape(lis)
+    print(f'Array is sorted in {swap} swaps.\nFirst Element: {fin[0]}\nLast Element: {fin[-1]}')
